@@ -10,7 +10,7 @@ Pull and start docker container:
 docker run --name inception -d -p 5000:5000 -v /tmp/inception_img:/tmp/inception_img matrixanger/inception_container
 ```
 
-The service is hosted on port 5000. For test, run `curl 127.0.0.1:5000`, and the expected response is a string "Hello, World!".
+The service is hosted on port 5000. For test, run `curl 127.0.0.1:5000`, and the expected response is a string "Hello, World!". If you want to change the port, please change the settings in docker command: `-p port:5000`. 
 
 ## API Description
 
