@@ -2,7 +2,7 @@ import requests
 import base64
 import json
 
-image_path = 'panda.ppm'
+image_path = 'cat.jpg'
 with open(image_path, "rb") as img:
     encoded_string = base64.b64encode(img.read())
 

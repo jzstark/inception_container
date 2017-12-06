@@ -9,7 +9,7 @@ import base64
 app = Flask(__name__)
 #CORS(app)
 
-app.config['UPLOAD_FOLDER'] = '/tmp/inception_img/' #os.path.expanduser('~/Desktop/')
+app.config['UPLOAD_FOLDER'] = '/tmp/'#'/tmp/inception_img/' #os.path.expanduser('~/Desktop/')
 
 
 temp = app.config['UPLOAD_FOLDER'] + 'tempimage'

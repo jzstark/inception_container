@@ -7,14 +7,14 @@ This repo provides scripts for building a containers that provides simple RESTfu
 Pull and start [docker container](https://hub.docker.com/r/matrixanger/inception_container/):
 
 ```
-docker run --name inception -d -p 5000:5000 -v /tmp/inception_img:/tmp/inception_img matrixanger/inception_container
+docker run --name inception -d -p 5000:5000 matrixanger/inception_container
 ```
 
 The service is hosted on port 5000. For test, run `curl 127.0.0.1:5000`, and the expected response is a string "Hello, World!". If you want to change the port, please change the settings in docker command: `-p port:5000`. 
 
 ## API Description
 
-Accept image as a base64-encoded string. The image is decoded and temporarily saved in `/tmp/inception_img`.
+Accept image as a base64-encoded string. The image is decoded and temporarily saved in `/tmp`.
 
 ```
 URL: /image
@@ -22,7 +22,7 @@ Method: GET
 
 Parameters:
 <content>: a base64-encoded image string
-<type>: a string that represents image type, such as "jpeg" and "png".
+<type>: a string that represents image type, such as "jpg" and "png".
 
 {
     "image":{
