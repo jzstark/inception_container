@@ -1,0 +1,13 @@
+FROM alpine
+MAINTAINER Roger Stark "rho.ajax@gmail.com"
+
+RUN apk update \
+    && apk add gsl-dev openblas-dev python-dev py-pip 
+RUN apk add imagemagick
+
+COPY . /app
+WORKDIR /app
+RUN pip install -r requirements.txt
+
+ENTRYPOINT ["python"]
+CMD ["app.py"]
